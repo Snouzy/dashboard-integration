@@ -1,0 +1,49 @@
+@import url('https://fonts.google.com/specimen/Inter');
+
+/* reset */
+*, *::after {
+    margin: 0;
+    padding: 0;
+}
+/* general */
+body {
+    background-color: #1D1F29;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    height: 245px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #20222F;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+}
+
+/* containers */
+.container {
+    width: 80%;
+    margin: auto;
+    border: 1px solid lightcoral;
+}
+
+/* header */
+header h1 {
+    padding-top: 2rem;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+}
+
+header p {
+    font-family: Inter, sans-serif;
+    color: #8C98C6;
+    font-weight: bold;
+}
+
+/* Attributions */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
