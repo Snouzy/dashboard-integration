@@ -9,6 +9,7 @@
 body {
     background-color: #1D1F29;
     position: relative;
+    font-family: Inter, sans-serif;
 }
 
 body::after {
@@ -29,21 +30,66 @@ body::after {
     margin: auto;
     border: 1px solid lightcoral;
 }
+.row--header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
 
 /* header */
 header h1 {
     padding-top: 2rem;
     color: #fff;
-    font-family: Inter, sans-serif;
     font-weight: bold;
 }
 
 header p {
-    font-family: Inter, sans-serif;
     color: #8C98C6;
     font-weight: bold;
 }
+.btn-theme--div {
+    display: flex;
+    align-items: center;
+}
+.btn-theme--div label {
+    color: #8C98C6;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgba(56,143,231,1) 0%, rgba(64,219,130,1) 100%);;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-out;
+    width: 48px;
+    height: 24px;
+    z-index: 2;
+}
+    
+.btn-theme--div label::after {
+    content: ' ';
+    background-color: #252B42;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(12px - 9px);
+    left: 3px;
+    transform: translateX(0);
+    transition: transform 0.3s linear;
+    width: 18px;
+    height: 18px;
+    z-index: 3;
+}
+.btn-theme--div input {
+	visibility: hidden;
+	position: absolute;
+	z-index: 2;
+}
 
+.btn-theme--text {
+    margin-right: 1rem;
+}
+
+.btn-theme--switch {
+
+}
 /* Attributions */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
