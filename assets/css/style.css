@@ -199,6 +199,54 @@ header p {
     margin-top: 1.3rem;
     text-align: center;
 }
+
+/*Overview*/
+.overview h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.overview-infos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 25px 35px;
+}
+
+.overview-infos-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 15rem; */
+    height: 125px;
+    justify-self: stretch;
+    background-color: #252B42;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.overview-infos-card--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.overview-infos-card--content:last-child {
+    margin-top: 1.5rem;
+}
+.overview-infos-cards--content__number {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.overview-infos-card--content h6 {
+    color: #8C98C6;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 /* Attributions */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
