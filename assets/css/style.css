@@ -53,16 +53,19 @@ body::after {
 .container {
     max-width: 1160px;
     margin: auto;
-    width: 100%;
+    width: 80%;
 }
 .row--header {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     justify-content: space-between;
+}
+.title {
+    width: 100%;
 }
 .infos {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 1rem;
     flex-wrap: wrap;
 }
@@ -94,6 +97,11 @@ header p {
     display: flex;
     align-items: center;
 }
+
+.btn-theme--div p:hover {
+    color: var(--main-text-color);
+    cursor: pointer;
+}
 .btn-theme--div label {
     color: var(--sub-text-color);
     font-weight: bold;
@@ -109,6 +117,8 @@ header p {
 
 .btn-theme--div label:hover {
     cursor: pointer;
+    color: #fff;
+
 }
 .btn-theme--div label::after {
     content: ' ';
@@ -131,6 +141,7 @@ header p {
 
 .btn-theme--text {
     margin-right: 1rem;
+    white-space: nowrap;
 }
 
 /* infos */
@@ -278,10 +289,62 @@ header p {
     font-size: 1rem;
 }
 
+.separator {
+    display: none;
+    height: 1px;
+    background-color: #333A55;
+    margin: 20px 0 20px 0;
+}
 /* Attributions */
 .attribution {
     color: #ccc;
     font-size: 1rem;
+    margin: 3rem;
     text-align: center;
 }
-.attribution a { color: var(--lightGray); }
+.attribution a { 
+    color: var(--lightGray);
+}
+
+@media screen and (min-width: 1275px) {
+    .infos {
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 955px) {
+    .overview-infos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* .overview-infos-card {
+        width: 80%;
+        justify-self: center;
+    } */
+}
+@media screen and (max-width: 666px) {
+    .separator {
+        display: block;
+    }
+    .overview-infos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .overview-infos-card {
+        width: 80%;
+        justify-self: center;
+    }
+    .row--header {
+        flex-direction: column;
+    }
+    header h1 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    header p {
+        margin-top: .5rem;
+    }
+
+    .btn-theme--div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
